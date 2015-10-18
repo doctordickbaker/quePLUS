@@ -1,7 +1,7 @@
 /// #order #vidInfo #vidLength
 
 var feed = document.getElementById("feed");
-var list = [];
+var list = ["empty"];
 var userInput = document.getElementById('userInput');
 var userSubmit = document.getElementById('userSubmit');
 
@@ -9,7 +9,7 @@ var userSubmit = document.getElementById('userSubmit');
 
 function listCreate() {
     feed.innerHTML = "";
-  for(var x=0;x<list.length;x++){
+  for(var x=1;x<list.length;x++){
     console.log("running");
     var card = document.createElement('div');
     card.className = "card";
