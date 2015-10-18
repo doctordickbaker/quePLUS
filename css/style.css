@@ -88,7 +88,7 @@ html, body {
   align-items: center;
 
 }
-#order {
+.order {
   flex: 0;
   max-width: 4em;
   align-self: flex-start;
@@ -97,12 +97,12 @@ html, body {
   font-weight: 200;
   color: rgba(0,0,0,.70);
 }
-#vidInfo {
+.vidInfo {
   text-align: center;
   flex: 1;
   rgba(0,0,0,.85);
 }
-#vidLength {
+.vidLength {
   align-self: flex-end;
   font-size: .85em;
   text-align: center;
