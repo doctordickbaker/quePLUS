@@ -1,11 +1,15 @@
 /// #order #vidInfo #vidLength
 
 var feed = document.getElementById("feed");
-var list = ["test0","test1","test2"];
+var list = [];
+var userInput = document.getElementById('userInput');
+var userSubmit = document.getElementById('userSubmit');
+
 
 
 function listCreate() {
   for(var x=0;x<list.length;x++){
+    console.log("running");
     var card = document.createElement('div');
     card.className = "card";
     feed.appendChild(card);
@@ -24,8 +28,14 @@ function listCreate() {
     vidLength.className="vidLength";
     vidLength.textContent = list[x];
     card.appendChild(vidLength);
-  }
+  };
 };
 
+function user() {
+  console.log("onclick registered");
+  list[list.length] = userInput.value;
+  listCreate();
+}
 
+userSubmit.onclick = user;
 listCreate();
