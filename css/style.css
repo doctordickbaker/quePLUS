@@ -107,3 +107,10 @@ html, body {
   font-size: .85em;
   text-align: center;
 }
+.fontawesome-minus {
+  flex: 0;
+  right: 0;
+  top: 0;
+  align-self: flex-start;
+  color: #e74c3c;
+}

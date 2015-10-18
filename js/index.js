@@ -10,9 +10,11 @@ var userSubmit = document.getElementById('userSubmit');
 function listCreate() {
     feed.innerHTML = "";
   for(var x=1;x<list.length;x++){
-    console.log("running");
+    console.log(x);
     var card = document.createElement('div');
     card.className = "card";
+    card.id =  "card" + x;
+    console.log(currentCard);
     feed.appendChild(card);
     
     var order = document.createElement('div');
@@ -29,6 +31,14 @@ function listCreate() {
     //vidLength.className="vidLength";
     //vidLength.textContent = list[x];
     //card.appendChild(vidLength);
+    
+    var delButton = document.createElement('div');
+    delButton.className = "fontawesome-minus";
+    card.appendChild(delButton);
+    
+    delButton.onclick= function deleteCard() {
+      
+    }
   };
 };
 
