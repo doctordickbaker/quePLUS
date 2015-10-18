@@ -8,6 +8,7 @@ var userSubmit = document.getElementById('userSubmit');
 
 
 function listCreate() {
+    feed.innerHTML = "";
   for(var x=0;x<list.length;x++){
     console.log("running");
     var card = document.createElement('div');
@@ -16,7 +17,7 @@ function listCreate() {
     
     var order = document.createElement('div');
     order.className = "order";
-    order.textContent = list[x];
+    order.textContent = x;
     card.appendChild(order);
     
     var vidInfo = document.createElement('div');
@@ -24,10 +25,10 @@ function listCreate() {
     vidInfo.textContent = list[x];
     card.appendChild(vidInfo);
     
-    var vidLength = document.createElement('div');
-    vidLength.className="vidLength";
-    vidLength.textContent = list[x];
-    card.appendChild(vidLength);
+    //var vidLength = document.createElement('div');
+    //vidLength.className="vidLength";
+    //vidLength.textContent = list[x];
+    //card.appendChild(vidLength);
   };
 };
 
