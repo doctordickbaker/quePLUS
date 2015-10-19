@@ -7,6 +7,7 @@ var userSubmit = document.getElementById('userSubmit');
 
 
 
+/////// List creator. Called by other functions when the list needs to be recreated////////
 function listCreate() {
     feed.innerHTML = "";
   for(var x=1;x<list.length;x++){
@@ -14,7 +15,6 @@ function listCreate() {
     var card = document.createElement('div');
     card.className = "card";
     card.id =  "card" + x;
-    console.log(currentCard);
     feed.appendChild(card);
     
     var order = document.createElement('div');
@@ -42,11 +42,16 @@ function listCreate() {
   };
 };
 
+
+
 function user() {
-  console.log("onclick registered");
   list[list.length] = userInput.value;
   listCreate();
 }
 
+
+
+
+//////////initilization stuff///////////
 userSubmit.onclick = user;
 listCreate();
