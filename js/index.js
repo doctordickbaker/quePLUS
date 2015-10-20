@@ -11,9 +11,10 @@ var userSubmit = document.getElementById('userSubmit');
 
 function listCreate() {
   
-  console.log("Creating list");
+    console.log("Creating list");
+ 
     feed.innerHTML = "";
-  for(var x=1;x<list.length;x++){
+    for(var x=1;x<list.length;x++){
     
     var card = document.createElement('div');  /// create the card itself,  which contains the below divs.
     card.className = "card";
@@ -39,14 +40,9 @@ function listCreate() {
     delButton.className = "fontawesome-minus";
     card.appendChild(delButton);
     
-    function deleteCard(x) {
-      console.log(x);
+    delButton.onclick = function(x){
       list.splice(x,1);
       listCreate();
-    };
-    
-    delButton.onclick = function(){
-      deleteCard(x);
     };
     
     
@@ -65,5 +61,3 @@ userSubmit.onclick = function() {
 };
 
 listCreate();
-
-/// note ON HOW TO REMOVE CARD:  remove list[x]
