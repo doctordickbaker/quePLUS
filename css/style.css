@@ -114,3 +114,15 @@ html, body {
   align-self: flex-start;
   color: #e74c3c;
 }
+#player {
+  position: fixed;
+  background: #2c3e50;
+  bottom: 1em;
+  right: 0em;
+  width: 22vh;
+  height: 14vh;
+}
+iframe {
+  width: 100%;
+  height: auto;
+}

@@ -4,6 +4,7 @@ var feed = document.getElementById("feed");
 var list = ["empty"];
 var userInput = document.getElementById('userInput');
 var userSubmit = document.getElementById('userSubmit');
+var playing = false;
 
 
 
@@ -33,9 +34,18 @@ function listCreate() {
       
     vidInfo.onclick = function(currentLoopIterationX) {
       return function() {
-        window.open( list[currentLoopIterationX]);
-      }
-    }(x);
+       
+          var urlshort = currentLoopIterationX.slice(17);
+          var urlcombined = "https://www.youtube.com/embed/" + urlshort;  
+          var playing = false;
+          
+          var videoPlayer = document.createElement('iframe');         /// create blank iframe
+          videoPlayer.src = list[currentCard];                        /// set created fame's src to for loops
+          console.log(urlcombined);
+          playing = true;
+        
+            }
+      }(x);
 
     //var vidLength = document.createElement('div');   ///  create Video length
     //vidLength.className="vidLength";
