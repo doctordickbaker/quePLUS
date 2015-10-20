@@ -30,6 +30,12 @@ function listCreate() {
     vidInfo.className = "vidInfo";
     vidInfo.textContent = list[x];
     card.appendChild(vidInfo);
+      
+    vidInfo.onclick = function(currentLoopIterationX) {
+      return function() {
+        window.open( list[currentLoopIterationX]);
+      }
+    }(x);
 
     //var vidLength = document.createElement('div');   ///  create Video length
     //vidLength.className="vidLength";
