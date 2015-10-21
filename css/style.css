@@ -117,12 +117,12 @@ html, body {
 #player {
   position: fixed;
   background: #2c3e50;
-  bottom: 1em;
+  bottom: 0;
   right: 0em;
   width: 22vh;
   height: 14vh;
 }
-iframe {
+#player iframe {
   width: 100%;
-  height: auto;
+  height: 100%;
 }

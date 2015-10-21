@@ -1,12 +1,15 @@
 /// #order #vidInfo #vidLength
 
 var feed = document.getElementById("feed");
-var list = ["empty"];
+var list = [];
 var userInput = document.getElementById('userInput');
 var userSubmit = document.getElementById('userSubmit');
-var playing = false;
+var player = document.getElementById('player');
+var firstpartURL = 
 
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/';
 
+var endURL = 'frameborder="0" allowfullscreen></iframe>"';
 
 /////// List creator. Called by other functions when the list needs to be recreated////////
 
@@ -34,16 +37,9 @@ function listCreate() {
       
     vidInfo.onclick = function(currentLoopIterationX) {
       return function() {
-       
-          var urlshort = currentLoopIterationX.slice(17);
-          var urlcombined = "https://www.youtube.com/embed/" + urlshort;  
-          var playing = false;
-          
-          var videoPlayer = document.createElement('iframe');         /// create blank iframe
-          videoPlayer.src = list[currentCard];                        /// set created fame's src to for loops
-          console.log(urlcombined);
-          playing = true;
-        
+        var userURL = list[currentLoopIterationX].slice(-11) + '"';
+        player.innerHTML = firstpartURL + userURL + endURL;
+        console.log(player.innerHTML);
             }
       }(x);
 
