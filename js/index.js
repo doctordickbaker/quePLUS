@@ -1,15 +1,22 @@
 /// #order #vidInfo #vidLength
 
 var feed = document.getElementById("feed");
-var list = [];
+var list = ["empty"];
+var grover = document.getElementById('grover');
 var userInput = document.getElementById('userInput');
 var userSubmit = document.getElementById('userSubmit');
 var player = document.getElementById('player');
-var firstpartURL = 
-
-'<iframe width="560" height="315" src="https://www.youtube.com/embed/';
+var firstpartURL = '<iframe width="560" height="315" src="https://www.youtube.com/embed/';
 
 var endURL = 'frameborder="0" allowfullscreen></iframe>"';
+userInput.value="";
+
+/////// Control for GROVER,  the sarcastic helper bot.
+
+function groverBot(say){
+  grover.innerHTML = say;
+  
+};
 
 /////// List creator. Called by other functions when the list needs to be recreated////////
 
@@ -70,7 +77,17 @@ function user() {
 
 
 userSubmit.onclick = function() {
-  user();
+  if(userInput.value === ""){
+    groverBot("You didn't enter anything yet.  Pathetic human");
+  };
+  if(userInput.value != "") {
+    user();
+    userInput.value="";
+    groverBot("I honestly didn't think you could handle such a complicated task.");
+  };
+
+  
 };
 
 listCreate();
+groverBot("Paste a youtube URL. I dare you.");
