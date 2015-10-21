@@ -44,7 +44,7 @@ function listCreate() {
       
     vidInfo.onclick = function(currentLoopIterationX) {
       return function() {
-        var userURL = list[currentLoopIterationX].slice(-11) + '"';
+        var userURL = list[currentLoopIterationX].slice(-11) + '?autoplay=1"';
         player.innerHTML = firstpartURL + userURL + endURL;
         console.log(player.innerHTML);
             }

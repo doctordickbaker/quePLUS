@@ -126,3 +126,7 @@ html, body {
   width: 100%;
   height: 100%;
 }
+.large {
+  width: 44vh;
+  height: 28vh;
+}
