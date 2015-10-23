@@ -15,9 +15,13 @@ html, body {
 .container {
   min-height: 100%;
   width: 100%;
-  background: #fff;
+  background: #ecf0f1;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  user-select: none; 
 }
 #topbar {
   background: linear-gradient(90deg,#19B5FE,#22A7F0);
@@ -37,7 +41,7 @@ html, body {
   margin: 0 auto 0 auto;
   
 }
-#grover {
+#settings {
   color: #fff;
   display: flex;
   justify-content: center;
@@ -70,6 +74,7 @@ html, body {
   border-color: rgba(0,0,0,.25);
   border-width: 1px;
   cursor: text;
+  text-align: center;
 }
 #feed {
   color: rgba(0,0,0,.75);
@@ -116,7 +121,7 @@ html, body {
 }
 #player {
   position: fixed;
-  background: #2c3e50;
+  background: linear-gradient(90deg,#19B5FE,#22A7F0);;
   bottom: 0;
   right: 0em;
   width: 22vh;

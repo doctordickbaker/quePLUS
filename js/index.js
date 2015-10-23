@@ -14,7 +14,7 @@ userInput.value="";
 /////// Control for GROVER,  the sarcastic helper bot.
 
 function groverBot(say){
-  grover.innerHTML = say;
+  userInput.value = say;
   
 };
 
@@ -83,11 +83,15 @@ userSubmit.onclick = function() {
   if(userInput.value != "") {
     user();
     userInput.value="";
-    groverBot("I honestly didn't think you could handle such a complicated task.");
+    groverBot("");
   };
 
   
 };
 
 listCreate();
-groverBot("Paste a youtube URL. I dare you.");
+groverBot("Copy and paste a youtube URL here. Or don't. Doesn't matter to me, kid.");
+
+userInput.onclick = (function(){
+  groverBot("");
+});
