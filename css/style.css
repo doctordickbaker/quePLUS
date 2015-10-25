@@ -22,13 +22,15 @@ html, body {
   -khtml-user-select: none;
   -moz-user-select: none;
   user-select: none; 
-}
+  }
 #topbar {
   background: linear-gradient(90deg,#19B5FE,#22A7F0);
   Padding: .43em;
   display: flex;
   flex-flow: column;
   justify-content: center;
+  transition: all 500ms ease;
+
 }
 #controls {
   Border-radius: 2px;
@@ -92,6 +94,7 @@ html, body {
   padding: 1em;
   align-items: center;
 
+
 }
 .order {
   flex: 0;
@@ -120,18 +123,21 @@ html, body {
   color: #e74c3c;
 }
 #player {
-  position: fixed;
   background: linear-gradient(90deg,#19B5FE,#22A7F0);;
-  bottom: 0;
-  right: 0em;
-  width: 22vh;
-  height: 14vh;
+  width: 100%;
+  height: 50vh;
+    transition: all 500ms ease; 
+
+
+
+}
+.off {
+  margin-top: -50vh;
+}
+.on {
+  margin-top: 0;
 }
 #player iframe {
   width: 100%;
   height: 100%;
-}
-.large {
-  width: 44vh;
-  height: 28vh;
 }
