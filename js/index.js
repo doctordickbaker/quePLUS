@@ -7,25 +7,15 @@ var userInput = document.getElementById('userInput');
 var userSubmit = document.getElementById('userSubmit');
 var player = document.getElementById('player');
 var firstpartURL = '<iframe width="560" height="315" src="https://www.youtube.com/embed/';
-var showplayer = document.getElementById('showplayer');
 
 var endURL = 'frameborder="0" allowfullscreen></iframe>"';
 userInput.value="";
 
-function showhidePlayer(){
-  if(player.className === "off"){
-    player.className = "on";
-  } else {
-    player.className = "off";
-  }
-};
-
-showplayer.onclick = showhidePlayer;
-
-
 /////// Control for GROVER,  the sarcastic helper bot.
+
 function groverBot(say){
   userInput.value = say;
+  
 };
 
 /////// List creator. Called by other functions when the list needs to be recreated////////
@@ -54,12 +44,9 @@ function listCreate() {
       
     vidInfo.onclick = function(currentLoopIterationX) {
       return function() {
-        
-          player.className = "on";
-          var userURL = list[currentLoopIterationX].slice(-11) + '?autoplay=1"';
-          player.innerHTML = firstpartURL + userURL + endURL;
-          console.log(player.innerHTML);
-      
+        var userURL = list[currentLoopIterationX].slice(-11) + '?autoplay=1"';
+        player.innerHTML = firstpartURL + userURL + endURL;
+        console.log(player.innerHTML);
             }
       }(x);
 
