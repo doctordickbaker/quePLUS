@@ -125,9 +125,11 @@ html, body {
   padding: 0.43em;
   align-items: center;
   justify-content: center;
+    transition: all 500ms;
+
   }
 .vidInfo {
-  flex: 3;
+  flex: 1;
   text-align: center;
 }
 .order {
@@ -137,4 +139,5 @@ html, body {
 .fontawesome-remove {
   flex: 1;
   text-align: right;
+  color: #fe1919;
 }
