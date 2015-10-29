@@ -121,11 +121,14 @@ html, body {
 }
 .card {
   display: flex;
-  padding: 2em;
+  height: 4em;
+  padding: 0.43em;
+  align-items: center;
   justify-content: center;
   }
 .vidInfo {
-  flex: 1;
+  flex: 3;
+  text-align: center;
 }
 .order {
   text-align: left;
