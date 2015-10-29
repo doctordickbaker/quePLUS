@@ -9,7 +9,7 @@ var player = document.getElementById('player');
 var firstpartURL = '<iframe width="560" height="315" src="https://www.youtube.com/embed/';
 var showplayer = document.getElementById('showplayer');
 
-var endURL = 'frameborder="0" allowfullscreen></iframe>"';
+var endURL = 'frameborder="0" allowfullscreen></iframe>';
 userInput.value="";
 
 function showhidePlayer(){
@@ -69,7 +69,7 @@ function listCreate() {
     //card.appendChild(vidLength);
 
     var delButton = document.createElement('div');  /////create delete button
-    delButton.className = "fontawesome-minus";
+    delButton.className = "fontawesome-remove";
     card.appendChild(delButton);
 
     delButton.onclick = function(currentLoopIterationX) {
